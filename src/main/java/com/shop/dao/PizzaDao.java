@@ -39,10 +39,10 @@ public class PizzaDao {
 
     private List<Pizza> getListPizzas() {
         Random generator = new Random();
-        int index = generator.nextInt(pizzas.size());
+        int index = generator.nextInt(pizzas.size() - 1);
 
         List<Pizza> listPizzas = new ArrayList<Pizza>();
-        for (int i = 0; i < index; i++) {
+        for (int i = 0; i <= index; i++) {
             Pizza pizza = pizzas.get(i);
             listPizzas.add(pizza);
         }
