@@ -5,7 +5,6 @@ import com.shop.model.Product;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -41,6 +40,13 @@ public class PizzaDao {
     private List<Pizza> getListPizzas() {
         Random generator = new Random();
         int index = generator.nextInt(pizzas.size());
-        return Arrays.asList(pizzas.get(index));
+
+        List<Pizza> listPizzas = new ArrayList<Pizza>();
+        for (int i = 0; i < index; i++) {
+            Pizza pizza = pizzas.get(i);
+            listPizzas.add(pizza);
+        }
+
+        return listPizzas;
     }
 }
