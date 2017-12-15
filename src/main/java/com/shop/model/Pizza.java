@@ -3,18 +3,20 @@ package com.shop.model;
 public class Pizza extends Product {
 
     private Long id;
+    private String name;
     private String typePizza;
     private String typeCheese;
     private String typeSauce;
     private String typeCrust;
     private String size;
     private String ingredient;
-    private Double preparationTime;
+    private Integer preparationTime;
 
-    public Pizza(Long id, String typePizza, String typeCheese, String typeSauce, String typeCrust,
-                 String size, String ingredient, Double preparationTime) {
+    public Pizza(Long id, String name, String typePizza, String typeCheese, String typeSauce, String typeCrust,
+                 String size, String ingredient, Integer preparationTime) {
 
         this.id = id;
+        this.name = name;
         this.typePizza = typePizza;
         this.typeCheese = typeCheese;
         this.typeSauce = typeSauce;
@@ -36,6 +38,14 @@ public class Pizza extends Product {
     @Override
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getTypePizza() {
@@ -86,11 +96,11 @@ public class Pizza extends Product {
         this.ingredient = ingredient;
     }
 
-    public Double getPreparationTime() {
+    public Integer getPreparationTime() {
         return preparationTime;
     }
 
-    public void setPreparationTime(Double preparationTime) {
+    public void setPreparationTime(Integer preparationTime) {
         this.preparationTime = preparationTime;
     }
 }

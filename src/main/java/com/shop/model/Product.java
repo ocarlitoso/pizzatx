@@ -6,7 +6,7 @@ import java.util.List;
 public class Product {
 
     private Long id;
-    private String name;
+    private Integer orderNumber;
     private Integer price;
     private List<Pizza> pizzas;
     private List<Spaghetti> spaghetties;
@@ -21,12 +21,12 @@ public class Product {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public Integer getOrderNumber() {
+        return orderNumber;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setOrderNumber(Integer orderNumber) {
+        this.orderNumber = orderNumber;
     }
 
     public Integer getPrice() {
